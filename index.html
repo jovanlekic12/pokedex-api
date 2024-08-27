@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
@@ -10,53 +11,53 @@
     <div id="app">
       <div class="container">
         <nav class="navbar">Pokedex</nav>
-        <main class="main-container">
-          <div class="pokemons-container">
-            <form class="search-pokemon-form" action="">
+        <main class="main__container">
+          <div class="pokemons__container">
+            <form class="search__pokemon__form" action="">
               <label for="pokemon">Search Pokemon by Name or ID: </label>
               <input
-                class="search-pokemon-input"
+                class="search__pokemon__input"
                 type="text"
                 name="pokemon"
                 id="pokemon"
               />
             </form>
-            <ol class="pokemon-list"></ol>
+            <ol class="pokemon__list"></ol>
           </div>
 
-          <div class="pokemon-type-container">
-            <h2 class="type-heading">Select Pokemon Type</h2>
-            <ul class="pokemon-type-list">
-              <li class="fire-type type-img" data-type="fire">
+          <div class="pokemon__type__container">
+            <h2 class="type__heading">Select Pokemon Type</h2>
+            <ul class="pokemon__type__list">
+              <li class="fire__type type__img" data-type="fire">
                 <img src="/images/fire.png" alt="" />
               </li>
 
-              <li class="water-type type-img" data-type="water">
+              <li class="water__type type__img" data-type="water">
                 <img src="/images/water.png" alt="" />
               </li>
 
-              <li class="electric-type type-img" data-type="electric">
+              <li class="electric__type type__img" data-type="electric">
                 <img src="/images/electric.png" alt="" />
               </li>
 
-              <li class="leaf-type type-img" data-type="bug">
+              <li class="leaf__type type__img" data-type="bug">
                 <img src="/images/bug.png" alt="" />
               </li>
             </ul>
           </div>
 
-          <div class="selected-pokemon">
-            <img class="pokemon-image" src="" alt="" />
-            <div class="pokemon-info">
-              <p><span>Name: </span><span class="pokemon-name"></span></p>
+          <div class="selected__pokemon">
+            <img class="pokemon__image" src="" alt="" />
+            <div class="pokemon__info">
+              <p><span>Name: </span><span class="pokemon__name"></span></p>
 
-              <p><span>Height: </span><span class="pokemon-height"></span></p>
+              <p><span>Height: </span><span class="pokemon__height"></span></p>
 
-              <p><span>Weight: </span><span class="pokemon-weight"></span></p>
+              <p><span>Weight: </span><span class="pokemon__weight"></span></p>
 
-              <p><span>Type: </span><span class="pokemon-type"></span></p>
+              <p><span>Type: </span><span class="pokemon__type"></span></p>
 
-              <p><span>ID: </span><span class="pokemon-id"></span></p>
+              <p><span>ID: </span><span class="pokemon__id"></span></p>
             </div>
           </div>
 
