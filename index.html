@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +7,63 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <div class="container">
+        <nav class="navbar">Pokedex</nav>
+        <main class="main-container">
+          <div class="pokemons-container">
+            <form class="search-pokemon-form" action="">
+              <label for="pokemon">Search Pokemon by Name or ID: </label>
+              <input
+                class="search-pokemon-input"
+                type="text"
+                name="pokemon"
+                id="pokemon"
+              />
+            </form>
+            <ol class="pokemon-list"></ol>
+          </div>
+
+          <div class="pokemon-type-container">
+            <h2 class="type-heading">Select Pokemon Type</h2>
+            <ul class="pokemon-type-list">
+              <li class="fire-type type-img" data-type="fire">
+                <img src="/images/fire.png" alt="" />
+              </li>
+
+              <li class="water-type type-img" data-type="water">
+                <img src="/images/water.png" alt="" />
+              </li>
+
+              <li class="electric-type type-img" data-type="electric">
+                <img src="/images/electric.png" alt="" />
+              </li>
+
+              <li class="leaf-type type-img" data-type="bug">
+                <img src="/images/bug.png" alt="" />
+              </li>
+            </ul>
+          </div>
+
+          <div class="selected-pokemon">
+            <img class="pokemon-image" src="" alt="" />
+            <div class="pokemon-info">
+              <p><span>Name: </span><span class="pokemon-name"></span></p>
+
+              <p><span>Height: </span><span class="pokemon-height"></span></p>
+
+              <p><span>Weight: </span><span class="pokemon-weight"></span></p>
+
+              <p><span>Type: </span><span class="pokemon-type"></span></p>
+
+              <p><span>ID: </span><span class="pokemon-id"></span></p>
+            </div>
+          </div>
+
+          <div class="overlay"></div>
+        </main>
+      </div>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
