@@ -12,3 +12,11 @@ const pokemonWeight = selectedPokemon.querySelector(".pokemon__weight");
 const pokemonType = selectedPokemon.querySelector(".pokemon__type");
 const pokemonId = selectedPokemon.querySelector(".pokemon__id");
 const overlay = document.querySelector(".overlay");
+
+let searchInputValue = "";
+
+searchInput.addEventListener(
+  "input",
+  () => (searchInputValue = searchInput.value)
+);
+const baseUrl = "https://pokeapi.co/api/v2/";
