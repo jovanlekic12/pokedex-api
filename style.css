@@ -1,3 +1,7 @@
+* {
+  font-family: monospace;
+}
+
 .navbar {
   width: 100%;
   display: flex;
@@ -32,6 +36,7 @@
 }
 
 .pokemon__list {
+  font-size: 16px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 8px;
