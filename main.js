@@ -69,3 +69,26 @@ function displaySelectedPokemon(image, name, height, weight, type, id) {
   overlay.style.visibility = "visible";
   selectedPokemon.style.visibility = "visible";
 }
+
+pokemonList.addEventListener("click", function (event) {
+  const currentPokemon = event.target.closest("p");
+  console.log(currentPokemon);
+  console.log(getPokemonByName(currentPokemon.textContent));
+  getPokemonByName(currentPokemon.textContent)
+    .then((data) => {
+      const {
+        sprites: { front_default: image },
+        name: pokemonName,
+        height,
+        weight,
+        types: [
+          {
+            type: { name: type },
+          },
+        ],
+        id,
+      } = data;
+      displaySelectedPokemon(image, pokemonName, height, weight, type, id);
+    })
+    .catch((error) => console.log(error));
+});
