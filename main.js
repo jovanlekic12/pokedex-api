@@ -92,3 +92,29 @@ pokemonList.addEventListener("click", function (event) {
     })
     .catch((error) => console.log(error));
 });
+
+searchForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  getPokemonByName(searchInputValue)
+    .then((data) => {
+      const {
+        sprites: { front_default: image },
+        name: pokemonName,
+        height,
+        weight,
+        types: [
+          {
+            type: { name: type },
+          },
+        ],
+        id,
+      } = data;
+      displaySelectedPokemon(image, pokemonName, height, weight, type, id);
+    })
+    .catch((error) => console.log(error.message));
+});
+
+overlay.addEventListener("click", () => {
+  overlay.style.visibility = "hidden";
+  selectedPokemon.style.visibility = "hidden";
+});
