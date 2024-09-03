@@ -72,8 +72,6 @@ function displaySelectedPokemon(image, name, height, weight, type, id) {
 
 pokemonList.addEventListener("click", function (event) {
   const currentPokemon = event.target.closest("p");
-  console.log(currentPokemon);
-  console.log(getPokemonByName(currentPokemon.textContent));
   getPokemonByName(currentPokemon.textContent)
     .then((data) => {
       const {
